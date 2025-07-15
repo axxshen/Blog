@@ -86,6 +86,12 @@ export async function resolveNotionPage(domain: string, rawPageId?: string) {
     recordMap = await getPage(pageId)
   }
 
-  const props = { site, recordMap, pageId }
+  // Ensure site object has all required properties
+  const siteWithConfig = {
+    ...site,
+    rootNotionPageId: site.rootNotionPageId || pageId
+  }
+  
+  const props = { site: siteWithConfig, recordMap, pageId }
   return { ...props, ...(await acl.pageAcl(props)) }
 }
