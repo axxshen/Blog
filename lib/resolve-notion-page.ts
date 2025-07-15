@@ -44,7 +44,17 @@ export async function resolveNotionPage(domain: string, rawPageId?: string) {
     }
 
     if (pageId) {
-      recordMap = await getPage(pageId)
+      try {
+        recordMap = await getPage(pageId)
+      } catch (error) {
+        console.error(`Error fetching page ${pageId}:`, error)
+        return {
+          error: {
+            message: `Error fetching page "${pageId}"`,
+            statusCode: 500
+          }
+        }
+      }
     } else {
       // handle mapping of user-friendly canonical page paths to Notion page IDs
       // e.g., /developer-x-entrepreneur versus /71201624b204481f862630ea25ce62fe
@@ -83,7 +93,17 @@ export async function resolveNotionPage(domain: string, rawPageId?: string) {
     pageId = site.rootNotionPageId
 
     console.log(site)
-    recordMap = await getPage(pageId)
+    try {
+      recordMap = await getPage(pageId)
+    } catch (error) {
+      console.error(`Error fetching root page ${pageId}:`, error)
+      return {
+        error: {
+          message: `Error fetching root page "${pageId}"`,
+          statusCode: 500
+        }
+      }
+    }
   }
 
   // Ensure site object has all required properties

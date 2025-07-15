@@ -186,7 +186,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const keys = Object.keys(recordMap?.block || {})
   const block = recordMap?.block?.[keys[0]]?.value
 
-  const isRootPage = pageId === site.rootNotionPageId
+  const isRootPage = pageId === site?.rootNotionPageId
   const isBlogPost =
     block?.type === 'page' && block?.parent_table === 'collection'
 
@@ -210,7 +210,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     return <Page404 site={site} pageId={pageId} error={error} />
   }
 
-  const title = getBlockTitle(block, recordMap) || site.name
+  const title = getBlockTitle(block, recordMap) || site?.name || 'Blog'
 
   console.log('notion page', {
     isDev: config.isDev,
@@ -266,8 +266,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
         darkMode={isDarkMode}
         components={components}
         recordMap={recordMap}
-        rootPageId={site.rootNotionPageId}
-        rootDomain={site.domain}
+        rootPageId={site?.rootNotionPageId}
+        rootDomain={site?.domain}
         fullPage={!isLiteMode}
         previewImages={!!recordMap.preview_images}
         showCollectionViewDropdown={false}
