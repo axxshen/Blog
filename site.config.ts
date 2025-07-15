@@ -9,16 +9,16 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'ASHENINK',
-  domain: 'https://www.notion.so/Ao-Shen-s-Blog-7b1c4f2277f744499e06fbe0ac4f6b09',
+  name: 'Ao Shen',
+  domain: 'https://aoshen.dev',
   author: 'Ao Shen',
 
   // open graph metadata (optional)
-  description: 'Welcome to Ao\'s blog',
+  description: 'Full-stack developer passionate about creating beautiful and functional digital experiences. Welcome to my portfolio.',
 
   // social usernames (optional)
   twitter: '',
-  github: '',
+  github: 'axxshen',
   linkedin: '',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
