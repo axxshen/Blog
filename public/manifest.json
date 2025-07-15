@@ -1,0 +1,24 @@
+{
+  "name": "ASHENINK",
+  "short_name": "Ao's blog",
+  "icons": [
+    {
+      "src": "https://img.notionusercontent.com/s3/prod-files-secure%2Fc9d47a73-9b73-4e98-9885-3c983263bd1e%2F6cd6950c-566c-4f0a-adaa-4bfad1317a45%2FIMG_1412.jpeg/size/w=2000?exp=1728828554&sig=yrRYHs6XIExjH4d9BFsCJNWylIfZcvcmb6zR1WSNp9o",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "https://img.notionusercontent.com/s3/prod-files-secure%2Fc9d47a73-9b73-4e98-9885-3c983263bd1e%2F6cd6950c-566c-4f0a-adaa-4bfad1317a45%2FIMG_1412.jpeg/size/w=2000?exp=1728828554&sig=yrRYHs6XIExjH4d9BFsCJNWylIfZcvcmb6zR1WSNp9o",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "https://img.notionusercontent.com/s3/prod-files-secure%2Fc9d47a73-9b73-4e98-9885-3c983263bd1e%2F6cd6950c-566c-4f0a-adaa-4bfad1317a45%2FIMG_1412.jpeg/size/w=2000?exp=1728828554&sig=yrRYHs6XIExjH4d9BFsCJNWylIfZcvcmb6zR1WSNp9o",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone"
+}
