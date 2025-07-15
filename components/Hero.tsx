@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
       <div className={styles.heroContent}>
         <div className={styles.heroText}>
           <h1 className={styles.heroTitle}>
-            Hello, I'm <span className={styles.heroName}>Ao Shen</span>
+            Hello, I&apos;m <span className={styles.heroName}>Ao Shen</span>
           </h1>
           <p className={styles.heroSubtitle}>
             Full-stack Developer & Digital Creator
