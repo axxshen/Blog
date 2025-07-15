@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
 }
 
 .heroContent {
@@ -27,16 +27,16 @@
 }
 
 .heroTitle {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 0.2s forwards;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
 }
 
 .heroName {
-  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  background: linear-gradient(135deg, #fae3d9 0%, #19547b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -71,7 +71,7 @@
 }
 
 .ctaButton {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -80,14 +80,14 @@
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(182, 137, 241, 0.4);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .ctaButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 6px 20px rgba(182, 137, 241, 0.6);
 }
 
 .socialLinks {
@@ -148,7 +148,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  background: linear-gradient(135deg, #fae3d9 0%, #19547b 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,12 +274,12 @@
 }
 
 .dark-mode .ctaButton {
-  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
-  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4);
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
+  box-shadow: 0 4px 15px rgba(182, 137, 241, 0.4);
 }
 
 .dark-mode .ctaButton:hover {
-  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.6);
+  box-shadow: 0 6px 20px rgba(182, 137, 241, 0.6);
 }
 
 /* Responsive design */

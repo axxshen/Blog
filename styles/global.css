@@ -21,12 +21,12 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   
-  /* Portfolio color scheme */
-  --portfolio-primary: #667eea;
-  --portfolio-secondary: #764ba2;
-  --portfolio-accent: #ffd89b;
-  --portfolio-dark: #1a202c;
-  --portfolio-light: #f7fafc;
+  /* Modern Portfolio color scheme */
+  --portfolio-primary: #b689f1;
+  --portfolio-secondary: #f7a8b8;
+  --portfolio-accent: #fae3d9;
+  --portfolio-dark: #20232a;
+  --portfolio-light: #eef2f5;
 }
 
 .static-tweet blockquote {
