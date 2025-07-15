@@ -9,7 +9,7 @@
 .action {
   position: relative;
   border-radius: 50%;
-  border: 2px solid var(--fg-color-6);
+  border: 2px solid rgba(182, 137, 241, 0.3);
   transition: all 300ms ease-out;
   width: 3.5em;
   height: 3.5em;
@@ -21,6 +21,8 @@
   text-decoration: none !important;
   user-select: none;
   cursor: pointer;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .action:last-child {
@@ -43,7 +45,8 @@
 .actionBg svg {
   width: 50%;
   height: 50%;
-  fill: var(--fg-color-6);
+  fill: rgba(182, 137, 241, 0.8);
+  transition: fill 300ms ease-out;
 }
 
 .actionBgPane {
@@ -55,6 +58,8 @@
 
 .action:hover {
   transition: all 100ms ease-out;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .action:hover .actionBgPane {
@@ -80,31 +85,31 @@
 }
 
 .twitter .actionBgPane {
-  background: #2795e9;
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
 }
 .twitter:hover {
-  border-color: #2795e9;
+  border-color: #b689f1;
 }
 
 .linkedin .actionBgPane {
-  background: #0077b5;
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
 }
 .linkedin:hover {
-  border-color: #0077b5;
+  border-color: #b689f1;
 }
 
 .github .actionBgPane {
-  background: #c9510c;
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
 }
 .github:hover {
-  border-color: #c9510c;
+  border-color: #b689f1;
 }
 
 .youtube .actionBgPane {
-  background: #FF0000;
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
 }
 .youtube:hover {
-  border-color: #FF0000;
+  border-color: #b689f1;
 }
 
 .medium .actionBgPane {
@@ -115,10 +120,10 @@
 }
 
 .newsletter .actionBgPane {
-  background: #777777;
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
 }
 .newsletter:hover {
-  border-color: #777777;
+  border-color: #b689f1;
 }
 
 .email .actionBgPane {

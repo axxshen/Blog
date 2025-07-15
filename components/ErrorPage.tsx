@@ -10,11 +10,11 @@ export const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => {
     <>
       <PageHead title={title} />
 
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <h1>Error Loading Page</h1>
+      <div className={styles.pageContainer}>
+        <main className={styles.pageMain}>
+          <h1 className={styles.pageTitle}>Something went wrong</h1>
 
-          {statusCode && <p>Error code: {statusCode}</p>}
+          {statusCode && <p className={styles.errorText}>Error code: {statusCode}</p>}
 
           <img src='/error.png' alt='Error' className={styles.errorImage} />
         </main>

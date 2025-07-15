@@ -19,6 +19,14 @@ body {
     'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
   font-family: var(--notion-font);
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  
+  /* Modern Portfolio color scheme */
+  --portfolio-primary: #b689f1;
+  --portfolio-secondary: #f7a8b8;
+  --portfolio-accent: #fae3d9;
+  --portfolio-dark: #20232a;
+  --portfolio-light: #eef2f5;
 }
 
 .static-tweet blockquote {

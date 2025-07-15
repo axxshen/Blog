@@ -24,12 +24,13 @@ const ToggleThemeButton = () => {
   }, [toggleDarkMode])
 
   return (
-    <div
-      className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
+    <button
+      className={cs(styles.modernThemeToggle, !hasMounted && styles.hidden)}
       onClick={onToggleTheme}
+      title="Toggle dark mode"
     >
       {hasMounted && isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-    </div>
+    </button>
   )
 }
 
@@ -43,44 +44,53 @@ export const NotionPageHeader: React.FC<{
   }
 
   return (
-    <header className='notion-header'>
-      <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={true} />
+    <header className={styles.modernHeader}>
+      <div className={styles.headerContent}>
+        <div className={styles.headerLeft}>
+          <Breadcrumbs block={block} rootOnly={true} />
+        </div>
 
-        <div className='notion-nav-header-rhs breadcrumbs'>
-          {navigationLinks
-            ?.map((link, index) => {
-              if (!link.pageId && !link.url) {
-                return null
-              }
+        <div className={styles.headerRight}>
+          <div className={styles.navLinks}>
+            {navigationLinks
+              ?.map((link, index) => {
+                if (!link.pageId && !link.url) {
+                  return null
+                }
 
-              if (link.pageId) {
-                return (
-                  <components.PageLink
-                    href={mapPageUrl(link.pageId)}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.PageLink>
-                )
-              } else {
-                return (
-                  <components.Link
-                    href={link.url}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.Link>
-                )
-              }
-            })
-            .filter(Boolean)}
+                if (link.pageId) {
+                  return (
+                    <components.PageLink
+                      href={mapPageUrl(link.pageId)}
+                      key={index}
+                      className={styles.modernNavLink}
+                    >
+                      {link.title}
+                    </components.PageLink>
+                  )
+                } else {
+                  return (
+                    <components.Link
+                      href={link.url}
+                      key={index}
+                      className={styles.modernNavLink}
+                    >
+                      {link.title}
+                    </components.Link>
+                  )
+                }
+              })
+              .filter(Boolean)}
+          </div>
 
-          <ToggleThemeButton />
-
-          {isSearchEnabled && <Search block={block} title={null} />}
+          <div className={styles.headerControls}>
+            <ToggleThemeButton />
+            {isSearchEnabled && (
+              <div className={styles.searchWrapper}>
+                <Search block={block} title={null} />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>

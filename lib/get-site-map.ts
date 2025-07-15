@@ -10,15 +10,25 @@ import { notion } from './notion-api'
 const uuid = !!includeNotionIdInUrls
 
 export async function getSiteMap(): Promise<types.SiteMap> {
-  const partialSiteMap = await getAllPages(
-    config.rootNotionPageId,
-    config.rootNotionSpaceId
-  )
+  try {
+    const partialSiteMap = await getAllPages(
+      config.rootNotionPageId,
+      config.rootNotionSpaceId
+    )
 
-  return {
-    site: config.site,
-    ...partialSiteMap
-  } as types.SiteMap
+    return {
+      site: config.site,
+      ...partialSiteMap
+    } as types.SiteMap
+  } catch (error) {
+    console.error('Error getting site map:', error)
+    // Return a minimal site map to prevent complete failure
+    return {
+      site: config.site,
+      pageMap: {},
+      canonicalPageMap: {}
+    } as types.SiteMap
+  }
 }
 
 const getAllPages = pMemoize(getAllPagesImpl, {
