@@ -21,7 +21,6 @@ import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { Footer } from './Footer'
 import { GitHubShareButton } from './GitHubShareButton'
-import { Hero } from './Hero'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
@@ -186,7 +185,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const keys = Object.keys(recordMap?.block || {})
   const block = recordMap?.block?.[keys[0]]?.value
 
-  const isRootPage = pageId === site?.rootNotionPageId
   const isBlogPost =
     block?.type === 'page' && block?.parent_table === 'collection'
 
@@ -256,7 +254,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
       {isLiteMode && <BodyClassName className='notion-lite' />}
       {isDarkMode && <BodyClassName className='dark-mode' />}
 
-      {isRootPage && !isLiteMode && <Hero />}
+      {/* Hero is now handled in pages/index.tsx */}
 
       <NotionRenderer
         bodyClassName={cs(

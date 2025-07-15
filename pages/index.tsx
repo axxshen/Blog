@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { NotionPage } from '@/components/NotionPage'
+import { Hero } from '@/components/Hero'
 import { domain } from '@/lib/config'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
 
@@ -19,5 +20,10 @@ export const getStaticProps = async () => {
 }
 
 export default function NotionDomainPage(props) {
-  return <NotionPage {...props} />
+  return (
+    <>
+      <Hero />
+      <NotionPage {...props} />
+    </>
+  )
 }

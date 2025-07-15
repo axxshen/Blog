@@ -9,7 +9,7 @@ import styles from './Hero.module.css'
 
 export const Hero: React.FC = () => {
   const scrollToContent = () => {
-    const content = document.querySelector('.notion-page-content')
+    const content = document.querySelector('.notion-viewport') || document.querySelector('.notion-page-content')
     if (content) {
       content.scrollIntoView({ behavior: 'smooth' })
     }
