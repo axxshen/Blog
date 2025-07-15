@@ -16,7 +16,7 @@ export const GitHubShareButton: React.FC = () => {
         height='0' //80 original
         viewBox='0 0 250 250'
         style={{
-          fill: '#70B7FD',
+          fill: '#b689f1',
           color: '#fff',
           position: 'absolute',
           zIndex: 1001,

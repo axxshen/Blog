@@ -23,15 +23,19 @@
 }
 
 .dark-mode .notion .notion-inline-code {
-  background: rgb(71, 76, 80) !important;
-  color: #ff4081;
+  background: rgba(182, 137, 241, 0.2) !important;
+  color: #f7a8b8;
   padding: 0.2em 0.4em !important;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 .notion .notion-inline-code {
-  color: #ff4081;
-  background: rgba(127, 122, 107, 0.1) !important;
+  color: #b689f1;
+  background: rgba(182, 137, 241, 0.1) !important;
   padding: 0.2em 0.4em !important;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 .token.cdata,

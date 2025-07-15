@@ -20,16 +20,26 @@ export const LoadingIcon = (props) => {
           y2='17.7832031%'
           id='linearGradient-1'
         >
-          <stop stopColor='rgba(164, 164, 164, 1)' offset='0%' />
+          <stop stopColor='rgba(138, 43, 226, 1)' offset='0%' />
           <stop
-            stopColor='rgba(164, 164, 164, 0)'
+            stopColor='rgba(138, 43, 226, 0)'
             stopOpacity='0'
             offset='100%'
           />
         </linearGradient>
+        <style>{` 
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          .rotate {
+            animation: rotate 1.5s linear infinite;
+          }
+        `}</style>
       </defs>
 
-      <g id='Page-1' stroke='none' strokeWidth='1' fill='none'>
+      <g id='Page-1' stroke='none' strokeWidth='1' fill='none' className='rotate'>
         <g transform='translate(-236.000000, -286.000000)'>
           <g transform='translate(238.000000, 286.000000)'>
             <circle
@@ -43,12 +53,12 @@ export const LoadingIcon = (props) => {
             <path
               d='M10,2 C4.4771525,2 0,6.4771525 0,12'
               id='Oval-2'
-              stroke='rgba(164, 164, 164, 1)'
+              stroke='rgba(138, 43, 226, 1)'
               strokeWidth='4'
             />
             <rect
               id='Rectangle-1'
-              fill='rgba(164, 164, 164, 1)'
+              fill='rgba(138, 43, 226, 1)'
               x='8'
               y='0'
               width='4'

@@ -14,21 +14,37 @@
   justify-content: center;
   align-items: center;
   padding: 2vmin;
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
 
   font-size: 16px;
   line-height: 1.5;
-  color: rgb(55, 53, 47);
-  caret-color: rgb(55, 53, 47);
+  color: white;
+  caret-color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
     'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.loadingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
 }
 
 .loadingIcon {
   animation: spinner 0.6s linear infinite;
   display: block;
-  width: 24px;
-  height: 24px;
-  color: rgba(55, 53, 47, 0.4);
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.loadingText {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .main {
@@ -36,6 +52,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* Modern 404 page styles */
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.pageMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #fae3d9 0%, #19547b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.errorText {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
 }
 
 .errorImage {
@@ -58,7 +113,7 @@
 
 /* Modern footer styles */
 .modernFooter {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
   color: white;
   padding: 3rem 0 1rem;
   margin-top: 4rem;
@@ -112,7 +167,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
-  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  background: linear-gradient(135deg, #fae3d9 0%, #19547b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -348,8 +403,9 @@
   padding: 12px;
   margin-right: 1vw;
   border-radius: 50%;
-  background: transparent;
+  background: rgba(182, 137, 241, 0.1);
   transition: all 250ms ease-out;
+  border: 1px solid rgba(182, 137, 241, 0.2);
 }
 
 .pageActions a:last-of-type {
@@ -358,16 +414,20 @@
 
 .pageActions a:hover {
   transition: all 50ms ease-out;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(182, 137, 241, 0.3);
 }
 
 .likeTweet:hover {
-  background: #f6e3e8;
-  color: #e0265e;
+  background: rgba(247, 168, 184, 0.2);
+  color: #f7a8b8;
+  border-color: #f7a8b8;
 }
 
 .retweet:hover {
-  color: #19bf64;
-  background: #e5f2e8;
+  color: #b689f1;
+  background: rgba(182, 137, 241, 0.2);
+  border-color: #b689f1;
 }
 
 @media (max-width: 1360px) {
@@ -464,7 +524,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #b689f1 0%, #f7a8b8 100%);
   transition: left 0.3s ease;
   z-index: -1;
 }
@@ -476,7 +536,7 @@
 .modernNavLink:hover {
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px rgba(182, 137, 241, 0.3);
 }
 
 .headerControls {
@@ -491,8 +551,8 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(102, 126, 234, 0.1);
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  background: rgba(182, 137, 241, 0.1);
+  border: 1px solid rgba(182, 137, 241, 0.2);
   border-radius: 50%;
   color: var(--fg-color);
   font-size: 1.1rem;
@@ -501,9 +561,9 @@
 }
 
 .modernThemeToggle:hover {
-  background: rgba(102, 126, 234, 0.2);
+  background: rgba(182, 137, 241, 0.2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 15px rgba(182, 137, 241, 0.2);
 }
 
 .searchWrapper {
@@ -517,13 +577,13 @@
 }
 
 :global(.dark-mode) .modernThemeToggle {
-  background: rgba(66, 153, 225, 0.1);
-  border: 1px solid rgba(66, 153, 225, 0.2);
+  background: rgba(182, 137, 241, 0.1);
+  border: 1px solid rgba(182, 137, 241, 0.2);
 }
 
 :global(.dark-mode) .modernThemeToggle:hover {
-  background: rgba(66, 153, 225, 0.2);
-  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.2);
+  background: rgba(182, 137, 241, 0.2);
+  box-shadow: 0 4px 15px rgba(182, 137, 241, 0.2);
 }
 
 /* Responsive header */
